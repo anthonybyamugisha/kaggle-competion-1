@@ -92,7 +92,7 @@ class MarchMadnessPredictor:
     def _process_seeds(self):
         """Process tournament seed information"""
         # Extract seed number from seed string (e.g., 'W01' -> 1)
-        self.seeds['SeedNum'] = self.seeds['Seed'].str.extract('(\d+)').astype(int)
+        self.seeds['SeedNum'] = self.seeds['Seed'].str.extract(r'(\d+)').astype(int)
         return self.seeds
     
     def _process_rankings(self):
